@@ -9,9 +9,10 @@ export class AppComponent {
   title = 'MenuConfi - Mantenedor del Menu';
 
   menuTest = [
-    {"option": "Productos", "Nivel":1, "path":"/productos"},
-    {"option": "Cartolas", "Nivel":1, "path":"/cartolas"},
-    {"option": "Información y Documentos", "Nivel":1, "path":"/informacionYdocumentos"},
+    {"option": "Productos", "Nivel":1, "active":true,"path":"/productos"},
+    {"option": "Fondos Mutuos", "Nivel":2, "active":true,"path":"/ffmm/misFondos"},
+    {"option": "Cartolas", "Nivel":1, "active":true,"path":"/cartolas"},
+    {"option": "Información y Documentos", "Nivel":1, "active":false,"path":"/informacionYdocumentos"},
 
   ]
   menu = [{
