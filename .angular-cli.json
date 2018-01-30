@@ -57,6 +57,9 @@
     }
   },
   "defaults": {
+    "serve": {
+      "port": 8080
+    },
     "styleExt": "css",
     "class": {
       "spec": false
