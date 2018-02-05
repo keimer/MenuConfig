@@ -23,7 +23,7 @@
         "styles.css"
       ],
       "scripts": [
-        // "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+        
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -58,7 +58,7 @@
   },
   "defaults": {
     "serve": {
-      "port": 8080
+      "port": 9090
     },
     "styleExt": "css",
     "class": {

@@ -1,0 +1,103 @@
+.c-header__profile--risky.c-header__profile-inside .top .name strong {
+    color: #E60D2E;
+}
+.c-header__profile--moderate.c-header__profile-inside .top .name strong {
+    color: #ff8b26;
+}
+.c-header__profile--conservative.c-header__profile-inside .top .name strong {
+    color: #2096C1;
+}
+
+.noDipslay {
+    @media screen and (max-width: 40rem) {
+        display: none!important;
+    }
+}
+
+#btn-more-perfil {
+    &.AGRESIVO {
+        color: #E60D2E!important;
+    }
+    &.MODERADO {
+        color: #ff8b26!important;
+    }
+    &.CONSERVADOR {
+        color: #2096C1!important;
+    }
+}
+
+strong {
+    &.AGRESIVO {
+        color: #E60D2E!important;
+    }
+    &.MODERADO {
+        color: #ff8b26!important;
+    }
+    &.CONSERVADOR {
+        color: #2096C1!important;
+    }
+}
+
+.bank {
+    cursor: pointer;
+}
+
+.warnText {
+    text-align: center;
+    font-size:1.6rem;
+}
+.timer {
+    text-align: center;
+    font-size:2rem;
+    font-weight: 700;
+}
+#menuPerfil {
+    cursor: pointer;
+}
+
+.top {
+    padding-bottom: 15px;
+}
+.name .fa.fa-angle-down {
+    color: #e60d2e;
+    font-size: 20px;
+    float: right;
+    margin: 2px 0 0 6px;
+}
+.btnClose.off {
+    display: none;
+}
+.btn-home {
+    position: absolute;
+    font-size: 29px;
+    color: #2B0D61;
+    right: 52px;
+    top: 6px;
+    cursor: pointer;
+    .fa {
+        outline: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .btnClose.off {
+        position: absolute;
+        right: 30px;
+        background: #4F4E8E;
+        padding: 0;
+        display: inline-block !important;
+        cursor: pointer;
+    }
+    .btnClose.off:hover {
+        background: #9C0816;
+    }
+    .btn-home {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .hidden-md-perfil {
+        display:none;
+    }
+}
