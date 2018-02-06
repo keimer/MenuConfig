@@ -12,6 +12,5 @@ export class PanelMenuDemoComponent {
         {"option": "Fondos Mutuos", "Nivel":2, "active":true,"path":"/ffmm/misFondos"},
         {"option": "Cartolas", "Nivel":1, "active":true,"path":"/cartolas"},
         {"option": "Información y Documentos", "Nivel":1, "active":true,"path":"/informacionYdocumentos"},
-    
       ]
 }
