@@ -1,40 +1,66 @@
+// ----------- MODULS -------------------
+import { ROUTES } from './app-routing.module';
+
+// ----------- COMPONENTS DE TERCEROS -------------------
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, PreloadAllModules, Routes } from '@angular/router';
+// import { HttpClientModule } from '@angular/common/http';
 
-
+// ----------- COMPONENTS -------------------
 import { AppComponent } from '../_components/app.component';
-import { menuCompletoService } from '../_services/menuCompleto.Service';
 import { HeaderComponent } from '../_components/header/header.coomponent';
-import { HttpService } from '../_services/http.service';
-import { CONSTANTS } from '../_models/constants';
-import { XHRBackend, RequestOptions, HttpModule, Http } from '@angular/http';
+import { FooterComponent } from '../_components/footer/footer.component';
 
-export function httpServiceFactory(
-  xhrBackend: XHRBackend,
-  requestOptions: RequestOptions
-): Http {
-  return new HttpService(xhrBackend, requestOptions);  
-}
+// ---------- MODELS ----------------
+import { CONSTANTS } from '../_models/constants';
+
+// ---------- SERVICES ----------------
+import { HttpService } from '../_services/http.service';
+import { menuCompletoService } from '../_services/menuCompleto.Service';
+// import { XHRBackend, RequestOptions, HttpModule, Http } from '@angular/http';
+
+// export function httpServiceFactory(
+//   xhrBackend: XHRBackend,
+//   requestOptions: RequestOptions
+// ): Http {
+//   return new HttpService(xhrBackend, requestOptions);  
+// }
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    RouterModule.forRoot(
+      ROUTES
+      // [
+      //   {
+      //     path: '',
+      //     loadChildren: '../_components/panelmenudemo/panelmenudemo.module#PanelMenudModule'
+      //   }
+      // ],
+      ,{
+        // Router options
+        useHash: false,
+        preloadingStrategy: PreloadAllModules,
+        initialNavigation: 'enabled'
+      }
+    ),
   ],
   providers: [
     menuCompletoService,
-    // HttpService,
-    CONSTANTS,
-    {
-      provide: HttpService,
-      useFactory: httpServiceFactory,
-      deps: [XHRBackend, RequestOptions]
-    }
+    HttpService,
+    CONSTANTS
+    // ,
+    // {
+    //   provide: HttpService,
+    //   useFactory: httpServiceFactory,
+    //   deps: [XHRBackend, RequestOptions]
+    // }
   ],
   bootstrap: [AppComponent]
 })

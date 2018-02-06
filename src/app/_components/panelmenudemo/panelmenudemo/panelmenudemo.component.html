@@ -1,0 +1,38 @@
+<main role="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-18 u-mb20">
+              <!-- <app-message [idMessage]="idMessage"></app-message> -->
+              <p>Panel Menu Demo </p>
+            </div>
+          </div>
+          <div class="row main">
+            <div class="col-lg-4">
+              
+              <div class="js-move-put">
+                <div class="js-move content"></div>
+              </div>
+            </div>
+            <div class="col-lg-14">
+                
+                <!-- <app-investment (pickedDate)="portafolio.getPortfolio($event)" [total]="portafolio.total"></app-investment>
+              <app-portfolio #portafolio></app-portfolio> -->
+              <div class="js-move">
+                <div class="js-move content">
+                  <!-- <app-banners [banners]="advertisement.banners"></app-banners> -->
+                  <!-- Ejemplo propio para mostrar los valores de una estructura -->
+                <ul class="list-group">
+                        <ng-container *ngFor="let opcion of menuTest; let i = index">
+                            <li class="list-group-item " *ngIf="opcion.active" [ngStyle]="{color:(opcion.Nivel == 1) ? 'green': 'red'}" [ngClass]="{Nivel_Par: (opcion.Nivel == 1)}">
+                            <!-- [ngClass]="{Nivel_Par: (opcion.Nivel == 1)}">  -->
+                            {{opcion.option}}  
+    
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
