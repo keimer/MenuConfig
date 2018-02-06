@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Http, RequestOptions } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
+// import { XHRBackend, RequestOptions, HttpModule, Http } from '@angular/http';
 
 import { PanelMenuDemoRoutingModule } from './panelmenudemo-routing.module';
 import { PanelMenuDemoComponent } from './panelmenudemo/panelmenudemo.component';
@@ -12,7 +13,8 @@ import { PanelMenuDemoComponent } from './panelmenudemo/panelmenudemo.component'
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        PanelMenuDemoRoutingModule
+        PanelMenuDemoRoutingModule,
+        
     ],
     declarations: [
         PanelMenuDemoComponent

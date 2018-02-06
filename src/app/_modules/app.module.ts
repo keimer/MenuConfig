@@ -5,6 +5,7 @@ import { ROUTES } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, PreloadAllModules, Routes } from '@angular/router';
+import { XHRBackend, RequestOptions, HttpModule, Http } from '@angular/http';
 // import { HttpClientModule } from '@angular/common/http';
 
 // ----------- COMPONENTS -------------------
@@ -18,7 +19,8 @@ import { CONSTANTS } from '../_models/constants';
 // ---------- SERVICES ----------------
 import { HttpService } from '../_services/http.service';
 import { menuCompletoService } from '../_services/menuCompleto.Service';
-// import { XHRBackend, RequestOptions, HttpModule, Http } from '@angular/http';
+import { HttpMenuService } from '../_services/httpMenu.service';
+
 
 // export function httpServiceFactory(
 //   xhrBackend: XHRBackend,
@@ -50,10 +52,12 @@ import { menuCompletoService } from '../_services/menuCompleto.Service';
         initialNavigation: 'enabled'
       }
     ),
+    HttpModule,
   ],
   providers: [
     menuCompletoService,
     HttpService,
+    HttpMenuService,
     CONSTANTS
     // ,
     // {
