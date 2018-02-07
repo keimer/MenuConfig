@@ -9,15 +9,18 @@
 
 let env = 'dev';
 let apiUrl = '';
+let apiCommonUrl = ''
 let apiDocsUrl = '';
 let privateURL = '';
 
 apiUrl = 'http://eServicesdev.desarrollo.cl/api/website';
+apiCommonUrl = 'http://apicommonFix'
 apiDocsUrl = 'http://eServicesdev.desarrollo.cl/doc/website';
 
 export const environment = {
   production: true,
   apiUrl,
+  apiCommonUrl,
   apiDocsUrl,
   tokenToRead: 'Invsec-Token',
   tokenToWrite: 'Invsec-Token',

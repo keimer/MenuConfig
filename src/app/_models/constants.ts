@@ -8,5 +8,5 @@ export class CONSTANTS{
    * @memberof CONSTANTS
    */
   public static URI_MENU_COMPLETO = `/api/menu/completo`;
-
+  
 }
